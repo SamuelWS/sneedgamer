@@ -1,10 +1,19 @@
 const { guildId } = require('../config.json');
-const { reactionsList, botId } = require('../reactions.json');
+const { gamesList, employmentList, watchList, gamingMessageId, employmentMessageId, watchMessageId, botId } = require('../reactions.json');
 
 module.exports = {
-    findRole : async function(client, reaction, user, action = "add") {
+    findRole : async function(client, reaction, user, messageId, action = "add") {
         const guild = client.guilds.cache.get(guildId);
 
+        var reactionsList
+        if (messageId == gamingMessageId) {
+            reactionsList = gamesList;
+        } else if (messageId == employmentMessageId) {
+            reactionsList = employmentList;
+        } else if (messageId == watchMessageId) {
+            reactionsList = watchList;
+        }
+        
         if (guild) {
             for (const [key, value] of Object.entries(reactionsList)) {                
                 if (value.reactionId === '<:' + reaction.emoji.identifier + '>') {

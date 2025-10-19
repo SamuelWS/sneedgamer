@@ -1,5 +1,5 @@
 const { Client, Events, GatewayIntentBits, Partials } = require('discord.js');
-const { messageId } = require('../reactions.json');
+const { gamingMessageId, employmentMessageId, watchMessageId } = require('../reactions.json');
 const { findRole } = require('./rolefinder.js');
 
 module.exports = {
@@ -19,11 +19,11 @@ module.exports = {
                 }
             }
             
-            if (reaction.message.id != messageId) {
+            if (reaction.message.id != employmentMessageId && reaction.message.id != gamingMessageId && reaction.message.id != watchMessageId) {
                 return;
             }
             
-            await findRole(client, reaction, user, "remove");
+            await findRole(client, reaction, user, reaction.message.id, "remove");
         });
     }
 }

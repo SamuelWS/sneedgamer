@@ -40,7 +40,7 @@
     "employmentList": {
         "Unemployed (Free Whenever)": {
             "roleName": "unemployed",
-            "reactionId": "<:unemployed:1429368723298455695> "
+            "reactionId": "<:unemployed:1429368723298455695>"
         },
         "Student/Part Time (Free Usually)":{
             "roleName": "student/part time",
@@ -51,8 +51,19 @@
             "reactionId": "<:wagie:1429368712288538685>"
         }
     },
-    "reactMessageId": "1413973517812109342",
-    "employmentMessageId": "",
+    "watchList": {
+        "Survivor (Cringe)": {
+            "roleName": "joey is gay and retarded (survivor)",
+            "reactionId": "<:survivor:1429375467529699451>"
+        },
+        "Berserk 1997 (Oct-Nov 2025 Groupwatch)":{
+            "roleName": "griffith did nothing wrong (berserk 97)",
+            "reactionId": "<:berserk:1429375457140277379>"
+        }
+    },
+    "gamingMessageId": "1413973517812109342",
+    "employmentMessageId": "1429371520547033141",
+    "watchMessageId": "1429376883950096384",
     "channelId": "1413312746673410109" ,
     "botId": "1413904317173338273"
 }

@@ -1,5 +1,5 @@
 const { Events } = require('discord.js');
-const { messageId, channelId, reactionsList } = require('../reactions.json');
+const { gamingMessageId, employmentMessageId, watchMessageId, channelId, gamesList, employmentList, watchList } = require('../reactions.json');
 
 
 module.exports = {
@@ -7,56 +7,39 @@ module.exports = {
 	once: true,
 	async execute(client) {
 		console.log(`Ready! Logged in as ${client.user.tag}`);
+		
+		var ids = [gamingMessageId, employmentMessageId, watchMessageId];
+		var outs = ["# Gaming Roles \n", "# Employment Roles \n", "# Groupwatch Roles \n"];
+		var lists = [gamesList, employmentList, watchList];
 
 		const channel = client.channels.cache.get(channelId);
-		var out = "# Gaming Roles \n";
 
-		for (const [key, value] of Object.entries(reactionsList)) {
-			out += value.reactionId + ' ' +  key + '\n';
-		}
+		for (var i = 0; i < ids.length; i++) {
+			var message;
 
-		var message;
+			var out = outs[i];
 
-		try {
-			message = await channel.messages.fetch(gamingMessageId);
-			message.edit(out);
-			console.log(`Setting up reaction message.`);
-		} catch (error) {
-			// The message was not found or an error occurred
-			console.error('Error fetching message:', error);
-			channel.send(out);
-		} 
+			for (const [key, value] of Object.entries(lists[i])) {
+				out += value.reactionId + ' ' +  key + '\n';
+			}
 
+			try {
+				message = await channel.messages.fetch(ids[i]);
+				message.edit(out);
+				console.log(`Setting up reaction message.`);
+			} catch (error) {
+				// The message was not found or an error occurred
+				console.error('Error fetching message:', error);
+				channel.send(out);
+			} 
 
-		if (message.id === gamingMessageId) {
-            for (const [key, value] of Object.entries(reactionsList)) {
-                message.react(value.reactionId);
-            }
-        }
-	
-		var out = "# Employment Roles \n";
-
-		for (const [key, value] of Object.entries(reactionsList)) {
-			out += value.reactionId + ' ' +  key + '\n';
-		}
-
-		var message;
-
-		try {
-			message = await channel.messages.fetch(employmentMessageId);
-			message.edit(out);
-			console.log(`Setting up reaction message.`);
-		} catch (error) {
-			// The message was not found or an error occurred
-			console.error('Error fetching message:', error);
-			channel.send(out);
-		} 
-
-
-		if (message.id === employmentMessageId) {
-			for (const [key, value] of Object.entries(reactionsList)) {
-				message.react(value.reactionId);
+			if (message.id === ids[i]) {
+				for (const [key, value] of Object.entries(lists[i])) {
+					message.react(value.reactionId);
+				}
 			}
 		}
+		
+		
 	}
 }
