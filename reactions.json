@@ -1,5 +1,5 @@
 {
-    "reactionsList": {
+    "gamesList": {
         "Modded MC (vampires)": {
             "roleName": "vampires (modded mc)",
             "reactionId": "<:vampirism:1413989071662874884>"
@@ -28,7 +28,7 @@
             "roleName": "boomdakka sneedwagon (40k 10e)",
             "reactionId": "<:warhammer10:1424498282079453277>"
         },
-        "Battlefield 6": {
+        "Battlefield 6 (AurA is poor)": {
             "roleName": "aura is poor (battlefield 6)",
             "reactionId": "<:battlefield6:1429364848222801980>"
         },
@@ -37,7 +37,22 @@
             "reactionId": "<:fortnite:1429364836290003014>"
         }
     },
-    "messageId": "1413973517812109342",
+    "employmentList": {
+        "Unemployed (Free Whenever)": {
+            "roleName": "unemployed",
+            "reactionId": "<:unemployed:1429368723298455695> "
+        },
+        "Student/Part Time (Free Usually)":{
+            "roleName": "student/part time",
+            "reactionId": "<:student:1429368702461022228>"
+        },
+        "Wagie (Free Evenings/Weekends)":{
+            "roleName": "wagie",
+            "reactionId": "<:wagie:1429368712288538685>"
+        }
+    },
+    "reactMessageId": "1413973517812109342",
+    "employmentMessageId": "",
     "channelId": "1413312746673410109" ,
     "botId": "1413904317173338273"
 }

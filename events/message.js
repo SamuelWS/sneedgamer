@@ -9,7 +9,7 @@ module.exports = {
 		console.log(`Ready! Logged in as ${client.user.tag}`);
 
 		const channel = client.channels.cache.get(channelId);
-		var out = "# Reaction Roles \n";
+		var out = "# Gaming Roles \n";
 
 		for (const [key, value] of Object.entries(reactionsList)) {
 			out += value.reactionId + ' ' +  key + '\n';
@@ -18,7 +18,7 @@ module.exports = {
 		var message;
 
 		try {
-			message = await channel.messages.fetch(messageId);
+			message = await channel.messages.fetch(gamingMessageId);
 			message.edit(out);
 			console.log(`Setting up reaction message.`);
 		} catch (error) {
@@ -28,13 +28,35 @@ module.exports = {
 		} 
 
 
-		if (message.id === messageId) {
+		if (message.id === gamingMessageId) {
             for (const [key, value] of Object.entries(reactionsList)) {
                 message.react(value.reactionId);
-                // if (!(message.reactions.cache.fetch(value.reactionId))) {
-                //     message.react(value.reactionId);
-                // }
             }
         }
+	
+		var out = "# Employment Roles \n";
+
+		for (const [key, value] of Object.entries(reactionsList)) {
+			out += value.reactionId + ' ' +  key + '\n';
+		}
+
+		var message;
+
+		try {
+			message = await channel.messages.fetch(employmentMessageId);
+			message.edit(out);
+			console.log(`Setting up reaction message.`);
+		} catch (error) {
+			// The message was not found or an error occurred
+			console.error('Error fetching message:', error);
+			channel.send(out);
+		} 
+
+
+		if (message.id === employmentMessageId) {
+			for (const [key, value] of Object.entries(reactionsList)) {
+				message.react(value.reactionId);
+			}
+		}
 	}
 }
