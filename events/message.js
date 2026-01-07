@@ -1,5 +1,5 @@
 const { Events } = require('discord.js');
-const { gamingMessageId, employmentMessageId, watchMessageId, channelId, gamesList, employmentList, watchList } = require('../reactions.json');
+const { gamingMessageId, slurMessageId, watchMessageId, channelId, gamesList, slurList, watchList } = require('../reactions.json');
 
 
 module.exports = {
@@ -8,9 +8,9 @@ module.exports = {
 	async execute(client) {
 		console.log(`Ready! Logged in as ${client.user.tag}`);
 		
-		var ids = [gamingMessageId, employmentMessageId, watchMessageId];
-		var outs = ["# Gaming Roles \n", "# Employment Roles \n", "# Groupwatch Roles \n"];
-		var lists = [gamesList, employmentList, watchList];
+		var ids = [gamingMessageId, slurMessageId, watchMessageId];
+		var outs = ["# Gaming Roles \n", "# Identity Roles \n", "# Groupwatch Roles \n"];
+		var lists = [gamesList, slurList, watchList];
 
 		const channel = client.channels.cache.get(channelId);
 
