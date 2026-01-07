@@ -45,20 +45,6 @@
             "reactionId": "<:cobbleverse:1447793482176401479>"
         }
     },
-    "employmentList": {
-        "Unemployed (Free Whenever)": {
-            "roleName": "unemployed",
-            "reactionId": "<:unemployed:1429368723298455695>"
-        },
-        "Student/Part Time (Free Usually)":{
-            "roleName": "student/part time",
-            "reactionId": "<:student:1429368702461022228>"
-        },
-        "Wagie (Free Evenings/Weekends)":{
-            "roleName": "wagie",
-            "reactionId": "<:wagie:1429368712288538685>"
-        }
-    },
     "watchList": {
         "Survivor (Cringe)": {
             "roleName": "joey is gay and retarded (survivor)",
@@ -72,10 +58,76 @@
             "roleName": "yo, angelo (jojo part4)",
             "reactionId": "<:part4:1443316682453155870>"
         }
-        
+    },
+    "slurList": {
+        "Racial Minority": {
+            "roleName": "nigga",
+            "reactionId": "🥷"
+        },
+        "Racist": {
+            "roleName": "racist",
+            "reactionId": "🧙"
+        }, 
+        "Queer": {
+            "roleName": "faggot",
+            "reactionId": "🏳️‍🌈"
+        },
+        "Hates the Gays": {
+            "roleName": "homophobe",
+            "reactionId": "🧑‍🌾"
+        },
+        "Jewish (OR Israeli)": {
+            "roleName": "jew",
+            "reactionId": "🇮🇱"
+        },
+        "Israel Hater": {
+            "roleName": "antisemite",
+            "reactionId": "🇩🇪"
+        },
+        "Trooned Out": {
+            "roleName": "troon",
+            "reactionId": "🏳️‍⚧️"
+        },
+        "Misgenders People": {
+            "roleName": "transphobe",
+            "reactionId": "🇺🇸"
+        },
+        "Fat Fuck": {
+            "roleName": "fat",
+            "reactionId": "🍔"
+        },
+        "Hates Fat People": {
+            "roleName": "normal sized",
+            "reactionId": "🥗"
+        },
+        "Unemployed": {
+            "roleName": "unempligga",
+            "reactionId": "🤕"
+        },
+        "Employed": {
+            "roleName": "j*bhaver",
+            "reactionId": "🤑"
+        },
+        "White Boy": {
+            "roleName": "cracker",
+            "reactionId": "🍞"
+        },
+        "Chuck": {
+            "roleName": "chuck",
+            "reactionId": "🇮🇪"
+        },
+        "Ginger": {
+            "roleName": "ginga",
+            "reactionId": "👨‍🦰"
+        },
+        "Neurodivergent": {
+            "roleName": "retard",
+            "reactionId": "🧩"
+        }
+
     },
     "gamingMessageId": "1413973517812109342",
-    "employmentMessageId": "1429371520547033141",
+    "slurMessageId": "1429371520547033141",
     "watchMessageId": "1429376883950096384",
     "channelId": "1413312746673410109" ,
     "botId": "1413904317173338273"

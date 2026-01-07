@@ -1,5 +1,5 @@
 const { guildId } = require('../config.json');
-const { gamesList, employmentList, watchList, gamingMessageId, employmentMessageId, watchMessageId, botId } = require('../reactions.json');
+const { gamesList, slurList, watchList, gamingMessageId, slurMessageId, watchMessageId, botId } = require('../reactions.json');
 
 module.exports = {
     findRole : async function(client, reaction, user, messageId, action = "add") {
@@ -8,15 +8,15 @@ module.exports = {
         var reactionsList
         if (messageId == gamingMessageId) {
             reactionsList = gamesList;
-        } else if (messageId == employmentMessageId) {
-            reactionsList = employmentList;
+        } else if (messageId == slurMessageId) {
+            reactionsList = slurList;
         } else if (messageId == watchMessageId) {
             reactionsList = watchList;
-        }
+        }        
         
         if (guild) {
-            for (const [key, value] of Object.entries(reactionsList)) {                
-                if (value.reactionId === '<:' + reaction.emoji.identifier + '>') {
+            for (const [key, value] of Object.entries(reactionsList)) {          
+                if (value.reactionId === '<:' + reaction.emoji.identifier + '>' || value.reactionId === decodeURIComponent(reaction.emoji.identifier)) {
                     const role = guild.roles.cache.find(r => r.name === value.roleName);
                         if (role) {
                             const member = await guild.members.fetch(user.id);

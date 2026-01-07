@@ -1,5 +1,5 @@
 const { Client, Events, GatewayIntentBits, Partials } = require('discord.js');
-const { gamingMessageId, employmentMessageId, watchMessageId } = require('../reactions.json');
+const { gamingMessageId, slurMessageId, watchMessageId } = require('../reactions.json');
 const { findRole } = require('./rolefinder.js');
 
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
                 }
             }
             
-            if (reaction.message.id != employmentMessageId && reaction.message.id != gamingMessageId && reaction.message.id != watchMessageId) {
+            if (reaction.message.id != slurMessageId && reaction.message.id != gamingMessageId && reaction.message.id != watchMessageId) {
                 return;
             }
             
