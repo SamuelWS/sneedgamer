@@ -96,8 +96,8 @@
             "roleName": "fat",
             "reactionId": "🍔"
         },
-        "Hates Fat People": {
-            "roleName": "normal sized",
+        "Hates Fat People and Disableds": {
+            "roleName": "ableist",
             "reactionId": "🥗"
         },
         "Unemployed": {
@@ -123,6 +123,18 @@
         "Neurodivergent": {
             "roleName": "retard",
             "reactionId": "🧩"
+        },
+        "Femoid": {
+            "roleName": "an foid",
+            "reactionId": "🙇‍♀️"
+        },
+        "Misogynist" :{
+            "roleName": "woman hater",
+            "reactionId": "🙅‍♂️"
+        },
+        "Schizophrenic": {
+            "roleName": "schizo",
+            "reactionId": "🫨"
         }
 
     },
