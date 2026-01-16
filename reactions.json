@@ -109,7 +109,7 @@
             "reactionId": "🤑"
         },
         "White Boy": {
-            "roleName": "cracker",
+            "roleName": "wigga",
             "reactionId": "🍞"
         },
         "Chuck": {
@@ -135,8 +135,11 @@
         "Schizophrenic": {
             "roleName": "schizo",
             "reactionId": "🫨"
+        },
+        "Wigger (different from White Boy)": {
+            "roleName": "wigga",
+            "reactionId": "🤠"
         }
-
     },
     "gamingMessageId": "1413973517812109342",
     "slurMessageId": "1429371520547033141",
